@@ -1,0 +1,488 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+body{
+    background: rgb(45, 46, 45);
+}
+
+.contenedor{
+    margin:0 auto;
+    padding: 0;
+    background: rgb(57, 63, 63);
+    width: 100%;
+    height: 100%;
+    max-height:1685px ;
+    max-width: 1400px;
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(5, auto);
+   
+    
+}
+
+header, .contenedor-banner-marca, main,.contenedores-aside,  footer{
+    border: 1px solid rgb(54, 52, 52);
+    padding: 40px;
+    font-size: 20px;
+    
+}
+
+header, .contenedor-banner-marca, main, .contenedores-aside, footer{
+grid-column-start: 1;
+grid-column-end: 5;
+
+}
+
+
+/* modal */
+
+.contenedor-modal{
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 100vh;
+    top:0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal{
+    width: 40%;
+    height: 35%;
+    background: #fff;
+    position: relative;
+    transition: transform 1s;
+    transform: translateY(0%);
+   border-radius: 10px;
+}
+
+.modal-c{
+    transform: translateY(-300%);
+}
+
+.close{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: rgb(223, 69, 69);
+    border-radius: 50%;
+    line-height: 20px;
+    cursor: pointer;
+    
+}
+
+.contenedor-modal a{
+    color: rgb(13, 13, 240);
+}
+
+
+input, .mail{
+    margin-top: 30px;
+}
+
+
+
+
+
+
+
+
+/*-----------------*/
+
+
+
+
+
+
+/*----contenido header----*/
+
+header{
+    background: rgb(253, 251, 251);
+    width: 100%;
+    padding: 5px;
+    margin: 0;
+    font-size: small;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    
+}
+
+
+header .icon{
+    margin-left: 3px;
+}
+
+.contacto{
+    background: white;
+    width: 70%;
+    text-align: left;
+    color:black;
+    margin-right: 300px;
+}
+
+
+  header .i-a:hover{
+color: red;
+}
+
+header .i:hover{
+    color: red;
+}
+
+
+.usuario{
+    background: white;
+    width: 5%;
+    
+    
+}
+
+.nuevo-usuario{
+    background: white;
+    width: 10%; 
+}
+ .nuevo-usuario, .usuario, a{
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+/*-----------------------contenedor-banner-marca(isologotipo-nav)-------*/
+
+.contenedor-banner-marca{
+    display: flex;
+    padding: 0px;
+    width: 100%;
+    align-content: space-between;
+    background: white;
+    
+}
+.contenedor-banner-marca img{
+    width: 15%;
+    height: 100%;
+    
+}
+.banner{
+    
+    width: 80%;
+    height: 100%;
+    padding: 0px;
+   background: white;
+}
+
+
+/*nav*/
+
+nav{
+    padding: 30px;
+    background: white;
+    margin-left: 50px;
+    height: 100%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+nav ul{
+    list-style: none;  
+    background: white;
+    text-align: center;
+    
+}
+nav ul li{
+    background: white;
+    display: inline-block;
+    font-size: x-large;
+    padding: 0px;
+    height: 40px;
+    margin-left: 10px;
+    
+}
+
+nav ul li:hover a{
+    background: red;
+    color: yellow;
+}
+nav ul li a{
+    text-decoration: none;
+    color:black;
+    padding: 6px;
+}
+
+
+/*-----------------------main-------*/
+
+main{
+    background: white;
+    padding: 5px;
+    margin: auto;
+    position: relative;
+    width: 100%;
+    height: 600px;
+    display: flex;
+	justify-content: center;
+	
+}
+
+
+
+main div{
+    
+    width: 80%;
+    height: 100%;
+}
+
+main div img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+    transition: 2s;
+    object-fit: cover;
+}
+
+
+
+
+
+
+/*-----flechas----*/
+.direcciones{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30px;
+	
+}
+
+.direcciones a{
+    color: red;
+    display: inline-block;
+    padding: 10px;
+    margin: 20px;
+    text-decoration: none;
+}
+.direcciones a:hover{
+    background: yellow;
+    transition: .5s;
+    /* margin:3px; */
+}
+
+.slide{
+	animation-name: slide;
+	animation-duration: 1.5s;
+    
+}
+@keyframes slide{
+	from{opacity: .4;}
+	to{opacity: 1;}
+}
+
+
+
+
+
+/*----------------aside----------*/
+
+.contenedores-aside{
+    width: 100%;
+    background: white;
+   display: flex;
+   flex-direction: column wrap;
+   justify-content: space-between;
+   font-size: large;
+}
+
+
+.aside1, .aside2, .aside3 {
+ background: orange;
+box-shadow: 8px 30px 20px -30px rgb(48, 47, 47);
+ width: 30%;
+ height: 80%;
+border-radius: 10px;
+ top: 0;
+}
+
+.contenedores-aside img{
+    border-radius: 10px;
+    height: 100%;
+}
+
+
+
+
+ aside button {
+    background-color: yellow; 
+    border: none;
+    color: black;
+    padding: 9px 55px;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 0px;
+  }
+
+aside button:hover{
+    color:yellow;
+    background: red;
+}
+
+aside button{
+    transition-duration: 0.4s;
+}
+
+
+
+
+/*---footer---*/
+
+footer{
+    background: white;
+    padding: 0px;
+    width: 100%;
+    
+} 
+.cont{
+    width: 100%;
+    background:white;
+    display: flex;
+    flex-wrap:nowrap;
+    justify-content: space-between;
+}
+
+.cont div{
+    width: 30%;
+    
+}
+
+.nav2{
+    background: white;
+    
+    padding: 25px;
+    text-align: left;
+}
+
+
+.nav2 .nav-2 a{
+    margin: 2px;
+}
+footer ul li a{
+    background: white;
+    display:block;
+    text-decoration: none;
+    font-size: large;
+}
+footer li{
+    list-style: none;
+}
+
+.pagos{
+    background: white;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    
+}
+.pagos, .medios-pago{
+    width: 100%;
+    background: white;
+    margin: 0;
+    
+}
+
+.pagos div{
+    background: white;
+    margin: 3px;
+    height: 30%;
+    width: 17%;
+}
+
+
+.pagos .icon{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    
+}
+.pagos p{
+    margin-top: 10px;
+    background: white;
+    height: 15%;
+}
+
+.redes{
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+.redes .icon{
+width: 100%;
+height: 50px;
+margin: 0;
+}
+
+.redes div{
+    background:white;
+    height:25%;
+    width: 13%;
+    margin:3px;
+}
+
+
+
+
+footer .info{
+    width: 100%;
+    /* background: rgb(170, 5, 5); */
+    padding: 1px;
+    font-size: x-small;
+    
+}
+
+.info div{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background: white;
+    padding: 0px;
+    
+    
+} 
+
+/* responsive */
+
+
+@media screen and (max-width:900px){
+    .aside1, .aside2, .aside3 {
+        background: gray;
+        height: 60%;
+       }aside button {
+        padding: 5px 30px;
+        font-size: 10px; 
+      }.nuevo-usuario{
+        width: 15%; 
+    }
+}
+
+
+
+
